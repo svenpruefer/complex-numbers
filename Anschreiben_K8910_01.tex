@@ -1,0 +1,70 @@
+\documentclass{anschreiben}
+\renewcommand{\lehrstuhl}{Numerik}
+\renewcommand{\absender}{%
+      \textbf{Ralph Lettau} \\
+      \ \\
+      Lehrstuhl f\"ur Angewandte Analysis \\
+      Universit\"at Augsburg \\
+			Institut f\"ur Mathematik \\
+      86135 Augsburg \\
+      \ \\
+      Telefon \> +49 821 598 - 2244 \\
+      \textsf{ralph.lettau@math.uni-augsburg.de} \\}
+
+\renewcommand{\datum}{\today}
+\renewcommand{\betreff}{Mathesch\"ulerzirkel der Universit\"at Augsburg}
+
+
+\begin{document}
+
+\newread\quelle
+\openin\quelle=ralph.csv
+\read\quelle to \zeile
+
+\loop
+\read\quelle to \zeile
+\ifeof\quelle\global\morefalse\else
+
+\bearbeitezeile
+
+\ifganzeklasse Liebe Sch\"ulerinnen und Sch\"uler,\else
+\ifweiblich Liebe\else Lieber\fi{} \vorname,\fi
+
+heute erh\"altst Du Dein erstes Paket zum Mathesch\"ulerzirkel der Universit\"at Augsburg. Darin findest Du diesen Infozettel und Dein erstes Skript zum Thema \emph{Komplexe Zahlen}. Wir freuen uns, dass Du beim Mathezirkel mitmachst!
+
+Bevor Du mit den Aufgaben loslegst, m\"ochte ich Dir noch einmal ein paar Informationen zum Ablauf und zu mir geben.
+Mein Name ist Ralph und ich bin f\"ur Euch, also den Korrespondenzzirkel der Klassen 8, 9 und 10, zust\"andig. Das hei\ss t, dass ich mir Themen und Aufgaben f\"ur Euch \"uberlege und sie Euch zuschicke. Wenn Du mir in den n\"achsten Wochen L\"osungen per Post oder Mail zukommen l\"asst, schicke ich sie Dir
+korrigiert zur\"uck. Dabei ist es egal ob du nur eine Aufgabe bearbeitet hast, oder mehrere. Es ist aber nat\"urlich auch v\"ollig in Ordnung, wenn Du Deine L\"osungen nicht einschickst. Au\ss erdem kannst Du Dich jederzeit mit Fragen oder Themenw\"unschen an mich wenden. Meine Kontaktdaten findest Du rechts oben. Aktuelle Informationen gibt es auch auf der Homepage des Mathesch\"ulerzirkels:
+\begin{center}
+\textsl{http:/\!/www.math.uni-augsburg.de/schueler/mathezirkel/}.
+\end{center}
+
+Du wirst etwa alle vier Wochen neue Aufgaben zugeschickt bekommen. Ich richte mich dabei auch nach dem Ferienkalender. Da der erste Brief sich leider etwas verzögert hat (bitte sei mir nicht böse!) folgt der zweite diesmal mit etwas weniger Abstand. Ich versuche, ihn euch bis vor den Weihnachtsferien zukommen zu lassen.
+
+%Den n\"achsten Brief bekommst Du vor Weihnachten, damit Dir \"uber die Ferien nicht langweilig wird. Wenn Du mir bis dahin L\"osungen zugeschickt hast, bekommst Du sie mit dem n\"achsten Brief korrigiert zur\"uck.
+Lass dich nicht entmutigen, falls du mal eine Aufgabe nicht l\"osen kannst. Es ist nicht weiter schlimm 
+eine Aufgabe auszulassen. Einige Aufgaben sind bewusst herausfordernd gestellt.
+Im Vordergrund soll der Spa{\ss} an der Mathematik stehen!
+
+%Außerdem w\"urde ich mich freuen, wenn Du mir deine R\"uckmeldung zu den Aufgaben 
+%auf \textsl{http:/\!/feedback.speicherleck.de} geben w\"urdest.
+
+Viel Vergn\"ugen und Erfolg bei der Bearbeitung! 
+
+Ich freue mich auf das kommende Zirkeljahr.
+
+Viele Gr\"u\ss e\newline
+Ralph
+
+\vfill
+
+%Kleiner Hinweis f\"ur die Vorweihnachtszeit:\\
+%Unter der Internetadresse \textsl{http:/\!/www.mathekalender.de} findest Du einen mathematischen Ad\-vents\-ka\-len\-der. Dort gibt es f\"ur jeden Tag im Advent mathematische Knobelaufgaben.\\[5pt]
+
+\newpage
+\fi\ifmore\repeat
+
+\closein\quelle
+
+\end{document}
+
